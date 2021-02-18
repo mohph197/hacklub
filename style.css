@@ -69,15 +69,15 @@ body{
     cursor: pointer;
 }
 #about{
-    margin-top: 0px;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     font-size: 20pt;
 }
 article{
-    width: 48%;
-    height: 470px;
+    width: 600px;
+    height: 620px;
+    margin: 5px;
     display: flex;
     flex-flow: column nowrap;
     color: white;
@@ -88,15 +88,18 @@ article > .title{
     font-weight: bolder;
     border-bottom: 2px solid #f80000;
     border-right: 2px solid #f80000;
-    padding: 20px 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
     color: #f80000b4;
 }
 article > .title > .mask{
     position: absolute;
-    top: 0px;
-    right: -2px;
+    padding-top: 1px;
+    top: -1px;
+    right: -3px;
     height: 100%;
-    width: 2px;
+    width: 4px;
     background-color: #0a0d15;
     transition-duration: 0.2s;
 }
@@ -111,17 +114,23 @@ article > .content{
     overflow: hidden;
     padding: 10px 10px;
     box-shadow: 5px 10px 20px black;
+    background-color: #0e121d;
     transition-duration: 0.4s;
 }
 article > .title:hover + .content{
     border-bottom: 2px solid #f80000;
-    height: 275px;
+    height: 550px;
+    box-shadow: 0px 0px 20px black;
+}
+article > .content:hover{
+    border-bottom: 2px solid #f80000;
+    height: 550px;
     box-shadow: 0px 0px 20px black;
 }
 #contact{
     margin-top: 50px;
     background-color: #0f131f;
-    padding: 30px 0px
+    padding: 30px 0px;
 }
 #detailsR{
     display: flex;
