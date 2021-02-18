@@ -1,0 +1,155 @@
+@font-face{
+    font-family: Comfortaa;
+    src: url("fonts/Comfortaa-Medium.ttf");
+}
+body{
+    background-color: #0a0d15;
+    font-family: Comfortaa;
+    cursor: default;
+}
+#agendaTitleR{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+#agendaTitle{
+    font-size: 30pt;
+    color: white;
+    transition-duration: 0.15s;
+}
+#agendaTitle:hover{
+    border-bottom: 1px solid #f80000;
+    border-top: 1px solid #f80000;
+    padding: 20px 10px;
+    color: #f80000b4;
+}
+#daysR{
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    text-align: center;
+}
+.day{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    width: 300px;
+    height: 254px;
+    overflow: hidden;
+    font-size: 20pt;
+    color: white;
+}
+.day > .num{
+    border-top: 2px solid white;
+    font-weight: bold;
+    letter-spacing: 2pt;
+    padding: 10px 0px;
+    transition-duration: 0.2s;
+}
+.day > .content{
+    border-bottom: 2px solid white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    overflow: hidden;
+    height: 0px;
+    transition-duration: 0.2s;
+}
+.day > .content > div{
+    font-weight: lighter;
+    padding: 10px 0px;
+    transition-duration: 0.2s;
+}
+.day > .content > div:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+#about{
+    margin-top: 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    font-size: 20pt;
+}
+article{
+    width: 48%;
+    height: 470px;
+    display: flex;
+    flex-flow: column nowrap;
+    color: white;
+    align-items: flex-start;
+}
+article > .title{
+    position: relative;
+    font-weight: bolder;
+    border-bottom: 2px solid #f80000;
+    border-right: 2px solid #f80000;
+    padding: 20px 10px;
+    color: #f80000b4;
+}
+article > .title > .mask{
+    position: absolute;
+    top: 0px;
+    right: -2px;
+    height: 100%;
+    width: 2px;
+    background-color: #0a0d15;
+    transition-duration: 0.2s;
+}
+article > .title:hover .mask{
+    height: 70%;
+}
+article > .content{
+    height: 78px;
+    font-size: 16pt;
+    line-height: 40px;
+    border-left: 2px solid #f80000;
+    overflow: hidden;
+    padding: 10px 10px;
+    box-shadow: 5px 10px 20px black;
+    transition-duration: 0.4s;
+}
+article > .title:hover + .content{
+    border-bottom: 2px solid #f80000;
+    height: 275px;
+    box-shadow: 0px 0px 20px black;
+}
+#contact{
+    margin-top: 50px;
+    background-color: #0f131f;
+    padding: 30px 0px
+}
+#detailsR{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.fa{
+    border-radius: 10px;
+    background-color: white;
+    color: #0f131f;
+    text-decoration: none;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+    width: 50px;
+    padding: 10px 0px;
+    font-size: 30px;
+    transition-duration: 0.2s;
+}
+.fa-facebook:hover{
+    background-color: #3b5999;
+    color: white;
+}
+.fa-twitter:hover{
+    background-color: #55acee;
+    color: white;
+}
+.fa-instagram:hover{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    color: white;
+}
