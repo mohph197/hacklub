@@ -103,9 +103,6 @@ article > .title > .mask{
     background-color: #0a0d15;
     transition-duration: 0.2s;
 }
-article > .title:hover .mask{
-    height: 70%;
-}
 article > .content{
     height: 78px;
     font-size: 16pt;
@@ -116,16 +113,6 @@ article > .content{
     box-shadow: 5px 10px 20px black;
     background-color: #0e121d;
     transition-duration: 0.4s;
-}
-article > .title:hover + .content{
-    border-bottom: 2px solid #f80000;
-    height: 550px;
-    box-shadow: 0px 0px 20px black;
-}
-article > .content:hover{
-    border-bottom: 2px solid #f80000;
-    height: 550px;
-    box-shadow: 0px 0px 20px black;
 }
 #contact{
     margin-top: 50px;
