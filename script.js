@@ -1,14 +1,15 @@
+
 function onDay(index)
 {
     var days = document.querySelectorAll(".day");
     var daysContents = document.querySelectorAll(".day > .content");
     var daysNums = document.querySelectorAll(".day > .num");
-    days[index].style.color="#f80000";
-    daysContents[index].style.backgroundColor="#07090f";
+    days[index].style.color="#5ffcad";
+    daysContents[index].style.backgroundColor="#2d27fb60";
     daysContents[index].style.height="200px";
-    daysContents[index].style.borderColor="#f80000";
-    daysNums[index].style.backgroundColor="#07090f";
-    daysNums[index].style.borderColor="#f80000";
+    daysContents[index].style.borderColor="#5ffcad";
+    daysNums[index].style.backgroundColor="#2d27fb60";
+    daysNums[index].style.borderColor="#5ffcad";
 }
 function offDay(index)
 {
@@ -24,19 +25,25 @@ function offDay(index)
 }
 function onArticle(index)
 {
+    var articleTitle = document.querySelectorAll("article > .title");
     var articleContent = document.querySelectorAll("article > .content");
-    var articleTitleMask = document.querySelectorAll("article > .title > .mask");
-    articleTitleMask[index].style.height = "70%";
-    articleContent[index].style.borderBottom = "2px solid #f80000";
-    articleContent[index].style.height = "550px";
-    articleContent[index].style.boxShadow = "0px 0px 20px black";
+    // var articleTitleMask = document.querySelectorAll("article > .title > .mask");
+    // articleTitleMask[index].style.height = "70%";
+    articleTitle[index].style.color = "#5ffcadb4";
+    articleTitle[index].style.borderBottom = "2px solid #5ffcad";
+    articleContent[index].style.borderLeft = "2px solid #5ffcad";
+    articleContent[index].style.borderBottom = "2px solid #5ffcad";
+    // articleContent[index].style.boxShadow = "0px 0px 10px rgb(107, 150, 190)";
 }
 function offArticle(index)
 {
+    var articleTitle = document.querySelectorAll("article > .title");
     var articleContent = document.querySelectorAll("article > .content");
-    var articleTitleMask = document.querySelectorAll("article > .title > .mask");
-    articleTitleMask[index].style.height = "100%";
+    // var articleTitleMask = document.querySelectorAll("article > .title > .mask");
+    // articleTitleMask[index].style.height = "100%";
+    articleTitle[index].style.color = "white";
+    articleTitle[index].style.borderBottom = "2px solid white";
+    articleContent[index].style.borderLeft = "2px solid white";
     articleContent[index].style.borderBottom = "none";
-    articleContent[index].style.height = "78px";
-    articleContent[index].style.boxShadow = "5px 10px 20px black";
+    // articleContent[index].style.boxShadow = "2px 5px 10px rgb(107, 150, 190)";
 }
