@@ -20,14 +20,16 @@ body{
     background: radial-gradient(circle at 100% 100%, #f36b1ccc, #ff0166cc, #2d27fbcc, #2d27fbcc);
 }
 header{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 #heroR{
     display: inline-flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 img{
     transition-duration: 0.5s;
@@ -193,7 +195,7 @@ article > .content{
     #slogan > span{
         font-size: 45pt;
     }
-    #heroR:hover img{
+    #heroR:hover #logo{
         border-left: 3px solid white;
         padding-left: 50px;
     }
