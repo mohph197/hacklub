@@ -6,8 +6,11 @@
     font-family: pFont;
     src: url("fonts/Oswald.ttf");
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
-    background-image: url("img/background2.png");
+    background-image: url("img/background.png");
     background-size: cover;
     font-family: pFont;
     cursor: default;
@@ -15,7 +18,6 @@ body{
 }
 #main{
     background: radial-gradient(circle at 100% 100%, #f36b1ccc, #ff0166cc, #2d27fbcc, #2d27fbcc);
-    padding-top: 50px;
 }
 header{
     text-align: center;
@@ -25,6 +27,7 @@ header{
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 img{
     transition-duration: 0.5s;
@@ -40,11 +43,7 @@ img{
     letter-spacing: 2pt;
     transition-duration: 0.5s;
 }
-#slogan > span{
-    font-size: 45pt;
-}
 #agendaTitleR{
-    margin-top: 100px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -134,7 +133,7 @@ article > .title{
 }
 article > .content{
     height: 78px;
-    font-size: 16pt;
+    font-size: 20pt;
     line-height: 40px;
     border-left: 2px solid white;
     overflow: hidden;
@@ -191,6 +190,9 @@ article > .content{
         width: 0%;
         font-size: 30pt;
     }
+    #slogan > span{
+        font-size: 45pt;
+    }
     #heroR:hover img{
         border-left: 3px solid white;
         padding-left: 50px;
@@ -201,8 +203,11 @@ article > .content{
         border-right: 3px solid white;
         padding-right: 50px;
     }
-    article:hover .content{
-        height: 200px;
+    .content:hover{
+        height: 300px;
+    }
+    article > .title:hover + .content{
+        height: 300px;
     }
 }
 @media only screen and (max-width: 720px)
@@ -218,12 +223,18 @@ article > .content{
         margin-top: 50px;
         font-size: 20pt;
     }
+    #slogan > span{
+        font-size: 30pt;
+    }
     #slogan:hover{
         padding: 0px 20px;
         border-left: 2px solid white;
         border-right: 2px solid white;
     }
-    article:hover .content{
+    article > .content:hover{
+        height: 400px;
+    }
+    article > .title:hover + .content{
         height: 400px;
     }
 }
