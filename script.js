@@ -1,4 +1,3 @@
-
 function onDay(index)
 {
     var days = document.querySelectorAll(".day");
