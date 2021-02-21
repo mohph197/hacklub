@@ -23,7 +23,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 #heroR{
     display: inline-flex;
@@ -134,7 +134,7 @@ article > .title{
     color: white;
 }
 article > .content{
-    height: 78px;
+    max-height: 78px;
     font-size: 20pt;
     line-height: 40px;
     border-left: 2px solid white;
@@ -143,6 +143,12 @@ article > .content{
     box-shadow: 0px 0px 10px #2d27fb60;
     background-color: #2d27fb60;
     transition-duration: 0.4s;
+}
+.content:hover{
+    max-height: 400px;
+}
+article > .title:hover + .content{
+    max-height: 400px;
 }
 #contact{
     margin-top: 50px;
@@ -205,12 +211,6 @@ article > .content{
         border-right: 3px solid white;
         padding-right: 50px;
     }
-    .content:hover{
-        height: 300px;
-    }
-    article > .title:hover + .content{
-        height: 300px;
-    }
 }
 @media only screen and (max-width: 720px)
 {
@@ -229,14 +229,8 @@ article > .content{
         font-size: 30pt;
     }
     #slogan:hover{
-        padding: 0px 20px;
+        padding: 0px 30px;
         border-left: 2px solid white;
         border-right: 2px solid white;
-    }
-    article > .content:hover{
-        height: 400px;
-    }
-    article > .title:hover + .content{
-        height: 400px;
     }
 }
