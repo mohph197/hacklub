@@ -1,396 +1,440 @@
-@font-face{
-    font-family: hFont;
-    src: url("fonts/Sequel.ttf");
+@font-face {
+  font-family: hFont;
+  src: url("fonts/Sequel.ttf");
 }
-@font-face{
-    font-family: pFont;
-    src: url("fonts/Oswald.ttf");
+@font-face {
+  font-family: pFont;
+  src: url("fonts/Oswald.ttf");
 }
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
-body{
-    background-image: url("img/background.png");
-    background-size: cover;
-    font-family: pFont;
-    cursor: default;
-    margin: 0;
+body {
+  background-image: url("img/background.png");
+  background-size: cover;
+  font-family: pFont;
+  cursor: default;
+  margin: 0;
 }
-#main{
-    background: radial-gradient(circle at 100% 100%, #f36b1ccc, #ff0166cc, #2d27fbcc, #2d27fbcc);
+#main {
+  background: radial-gradient(
+    circle at 100% 100%,
+    #f36b1ccc,
+    #ff0166cc,
+    #2d27fbcc,
+    #2d27fbcc
+  );
 }
-a{text-decoration: none;}
-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+a {
+  text-decoration: none;
 }
-#heroR{
-    display: inline-flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 100px;
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
-#logo{
-    transition-duration: 0.5s;
+#heroR {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
 }
-#slogan{
-    color: white;
-    height: fit-content;
-    white-space: nowrap;
-    overflow: hidden;
-    font-family: hFont;
-    font-weight: bold;
-    text-align: left;
-    letter-spacing: 2pt;
-    transition-duration: 0.5s;
+#logo {
+  transition-duration: 0.5s;
 }
-#registerR{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
+#slogan {
+  color: white;
+  height: fit-content;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: hFont;
+  font-weight: bold;
+  text-align: left;
+  letter-spacing: 2pt;
+  transition-duration: 0.5s;
 }
-#register{
-    padding: 0px;
-    border: none;
-    background-color: transparent;
-    outline: none;
+#registerR {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+#register {
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  transition-duration: 0.2s;
+}
+#register > span {
+  position: relative;
+  font-weight: bold;
+  font-family: hFont;
+  font-size: 30pt;
+  letter-spacing: 2pt;
+  color: white;
+  transition-duration: 0.2s;
+}
+#agenda {
+  min-height: 100vh;
+}
+#agendaTitleR {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+#agendaTitle {
+  font-family: hFont;
+  font-size: 30pt;
+  color: white;
+  transition-duration: 0.15s;
+}
+#agendaTitle:hover {
+  border-bottom: 1px solid #5ffce7;
+  border-top: 1px solid #5ffce7;
+  padding: 20px 10px;
+  color: #5ffce7b4;
+}
+#daysR {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+}
+.day {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  overflow: hidden;
+  font-size: 20pt;
+  color: white;
+}
+.day > .num {
+  border-top: 2px solid white;
+  font-family: hFont;
+  font-weight: bold;
+  letter-spacing: 2pt;
+  padding: 10px 0px;
+  transition-duration: 0.2s;
+}
+.day > .content {
+  border-bottom: 2px solid white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  overflow: hidden;
+  height: 0%;
+  transition-duration: 0.2s;
+}
+.day > .content > .activity {
+  display: flex;
+  justify-content: space-around;
+  font-weight: lighter;
+  padding: 10px 0px;
+  transition-duration: 0.2s;
+}
+.day > .content > .activity:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+#about {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  font-size: 20pt;
+  margin-top: 50px;
+  min-height: 100vh;
+}
+article {
+  width: 600px;
+  margin: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  color: white;
+  align-items: flex-start;
+}
+article > .title {
+  position: relative;
+  font-family: hFont;
+  font-weight: bolder;
+  border-bottom: 2px solid white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  color: white;
+}
+article > .title > .flexBorder{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 0px;
+    border-right: 2px solid #5ffce7;
     transition-duration: 0.4s;
 }
-#register > span{
-    position: relative;
-    font-weight: bold;
-    font-family: hFont;
-    font-size: 30pt;
-    letter-spacing: 2pt;
-    color: white;
-    transition-duration: 0.4s;
+article > .content {
+  max-height: 78px;
+  font-size: 20pt;
+  line-height: 40px;
+  border-left: 2px solid white;
+  overflow: hidden;
+  padding: 10px 10px;
+  background-color: #27a6fb60;
+  box-shadow: 5px 5px 10px #022546c0;
+  transition-duration: 0.4s;
 }
-#agendaTitleR{
-    display: flex;
-    margin-top: 50px;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
+article > .content:hover {
+  max-height: 400px;
+  border-bottom: 2px solid #5ffce7;
+  border-left: 2px solid #5ffce7;
 }
-#agendaTitle{
-    font-family: hFont;
-    font-size: 30pt;
-    color: white;
-    transition-duration: 0.15s;
+article > .title:hover + .content {
+  max-height: 400px;
+  border-bottom: 2px solid #5ffce7;
+  border-left: 2px solid #5ffce7;
 }
-#agendaTitle:hover{
-    border-bottom: 1px solid #5ffcad;
-    border-top: 1px solid #5ffcad;
-    padding: 20px 10px;
-    color: #5ffcadb4;
+#workshopsR {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* height: 510px; */
+  min-height: 100vh;
 }
-#daysR{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    text-align: center;
+#workshopsR > #next,
+#workshopsR > #pre {
+  display: inline;
+  height: 500px;
+  position: relative;
+  width: 50px;
 }
-.day{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    overflow: hidden;
-    font-size: 20pt;
-    color: white;
+#workshopsR > #next > button {
+  position: absolute;
+  left: 0px;
 }
-.day > .num{
-    border-top: 2px solid white;
-    font-family: hFont;
-    font-weight: bold;
-    letter-spacing: 2pt;
-    padding: 10px 0px;
-    transition-duration: 0.2s;
+#workshopsR > #pre > button {
+  position: absolute;
+  right: 0px;
 }
-.day > .content{
-    border-bottom: 2px solid white;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    overflow: hidden;
-    height: 0%;
-    transition-duration: 0.2s;
+#workshopsR > #next > button,
+#workshopsR > #pre > button {
+  height: 500px;
+  width: 40px;
+  border: none;
+  background-color: #ffffff1f;
+  outline: none;
+  font-size: 20pt;
+  color: white;
+  transition-duration: 0.2s;
 }
-.day > .content > .activity{
-    display: flex;
-    justify-content: space-around;
-    font-weight: lighter;
-    padding: 10px 0px;
-    transition-duration: 0.2s;
+#workshopsR > #next > button:hover,
+#workshopsR > #pre > button:hover {
+  background-color: #5ffce7;
+  width: 50px;
+  cursor: pointer;
 }
-.day > .content > .activity:hover{
-    color: black;
-    background-color: white;
+/* #workshopsR > #next:hover{
+    background-color: #5ffce7;
+    width: 80px;
     cursor: pointer;
+} */
+.workshop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: #2e27fb31;
+  width: 400px;
+  height: 500px;
+  border-top: 2px solid #5ffce7;
+  border-bottom: 2px solid #5ffce7;
+  transition-duration: 0.4s;
 }
-#about{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    font-size: 20pt;
-    margin-top: 50px;
+#init1 {
+  /* height: 0px; */
+  width: 0px;
+  opacity: 0;
 }
-article{
+#init2 {
+  /* height: 0px; */
+  width: 0px;
+  opacity: 0;
+}
+.workshop > .title {
+  color: #5ffce7;
+  border-bottom: 2px solid #5ffce7;
+  padding: 10px 10px;
+  font-size: 22pt;
+  font-family: hFont;
+}
+.workshop > .content {
+  color: white;
+  font-size: 20pt;
+  padding: 0px 20px;
+  padding-top: 50px;
+  text-align: center;
+}
+#contact {
+  margin-top: 50px;
+  background-color: #2d27fb60;
+  padding: 30px 0px;
+}
+#detailsR {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.fa {
+  border-radius: 10px;
+  background-color: white;
+  color: #2e27fbd8;
+  text-decoration: none;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px;
+  width: 50px;
+  padding: 10px 0px;
+  font-size: 30px;
+  transition-duration: 0.2s;
+}
+.fa-facebook:hover {
+  background-color: #3b5999;
+  color: white;
+}
+.fa-twitter:hover {
+  background-color: #55acee;
+  color: white;
+}
+.fa-instagram:hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  color: white;
+}
+.fa-youtube-play:hover {
+  color: #cd201f;
+}
+.fa-linkedin:hover {
+  background-color: #0077b5;
+  color: white;
+}
+@media only screen and (min-width: 720px) {
+  #slogan {
+    width: 0%;
+    font-size: 30pt;
+  }
+  #slogan > span {
+    font-size: 45pt;
+  }
+  #heroR:hover #logo {
+    border-left: 3px solid white;
+    padding-left: 50px;
+  }
+  #heroR:hover #slogan {
+    width: 100%;
+    margin-left: 50px;
+    border-right: 3px solid white;
+    padding-right: 50px;
+  }
+  #register:hover {
+    border-top: 1px solid #5ffce7;
+    border-bottom: 1px solid #5ffce7;
+    /* background-color: #801af528; */
+    padding: 20px 20px;
+    padding-right: 130px;
+    cursor: pointer;
+  }
+  #register:hover span {
+    color: #5fddfc;
+  }
+  #register > span::after {
+    position: absolute;
+    content: "NOW";
+    right: 0px;
+    opacity: 0;
+    color: #5fddfc;
+    transition-duration: 0.4s;
+  }
+  #register:hover span::after {
+    right: -110px;
+    opacity: 1;
+  }
+  #contact {
+    margin-top: 300px;
+  }
+  .day {
     width: 600px;
-    margin: 10px;
-    display: flex;
-    flex-flow: column nowrap;
-    color: white;
-    align-items: flex-start;
-}
-article > .title{
-    position: relative;
-    font-family: hFont;
-    font-weight: bolder;
-    border-bottom: 2px solid white;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 10px;
-    color: white;
-}
-article > .content{
-    max-height: 78px;
-    font-size: 20pt;
-    line-height: 40px;
-    border-left: 2px solid white;
-    overflow: hidden;
-    padding: 10px 10px;
-    box-shadow: 0px 0px 10px #2d27fb60;
-    background-color: #2d27fb60;
-    transition-duration: 0.4s;
-}
-.content:hover{
-    max-height: 400px;
-}
-article > .title:hover + .content{
-    max-height: 400px;
-}
-#workshopsR{
-    margin-top: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 510px;
-}
-#workshopsR > button{
-    border: none;
-    background-color: transparent;
-    outline: none;
-    font-size: 20pt;
-    color: white;
-    transition-duration: 0.2s;
-}
-#workshopsR > #pre:hover{
-    padding-left: 20px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #5ffcad;
-    color: #5ffcad;
-    cursor: pointer;
-}
-#workshopsR > #next:hover{
-    padding-right: 20px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #5ffcad;
-    color: #5ffcad;
-    cursor: pointer;
-}
-.workshop{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    background-color: #2e27fb31;
-    width: 400px;
-    height: 500px;
-    border-top: 2px solid #5ffcad;
-    border-bottom: 2px solid #5ffcad;
-    transition-duration: 0.4s;
-}
-#init1{
-    height: 0px;
-    width: 0px;
-    opacity: 0;
-}
-#init2{
-    height: 0px;
-    width: 0px;
-    opacity: 0;
-}
-.workshop > .title{
-    color: #5ffcad;
-    border-bottom: 2px solid #5ffcad;
-    padding: 10px 10px;
-    font-size: 22pt;
-    font-family: hFont;
-}
-.workshop > .content{
-    color: white;
-    font-size: 20pt;
-    padding: 0px 20px;
-    padding-top: 50px;
-    text-align: center;
-}
-#contact{
-    margin-top: 50px;
-    background-color: #2d27fb60;
-    padding: 30px 0px;
-}
-#detailsR{
-    display: flex;
+    height: 254px;
+  }
+  .day > .content > .activity {
     flex-flow: row wrap;
+  }
+  article {
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  #heroR {
+    display: inline-flex;
+    flex-flow: column nowrap;
     justify-content: center;
-}
-.fa{
-    border-radius: 10px;
-    background-color: white;
-    color: #2e27fbd8;
-    text-decoration: none;
-    text-align: center;
-    text-decoration: none;
-    margin: 10px;
-    width: 50px;
-    padding: 10px 0px;
-    font-size: 30px;
-    transition-duration: 0.2s;
-}
-.fa-facebook:hover{
-    background-color: #3b5999;
-    color: white;
-}
-.fa-twitter:hover{
-    background-color: #55acee;
-    color: white;
-}
-.fa-instagram:hover{
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-    color: white;
-}
-.fa-youtube-play:hover{
-    color: #cd201f;
-}
-.fa-linkedin:hover{
-    background-color: #0077B5;
-    color: white;
-}
-@media only screen and (min-width: 720px)
-{
-    #slogan{
-        width: 0%;
-        font-size: 30pt;
-    }
-    #slogan > span{
-        font-size: 45pt;
-    }
-    #heroR:hover #logo{
-        border-left: 3px solid white;
-        padding-left: 50px;
-    }
-    #heroR:hover #slogan{
-        width: 100%;
-        margin-left: 50px;
-        border-right: 3px solid white;
-        padding-right: 50px;
-    }
-    #register:hover{
-        border-top: 1px solid #5ffcad;
-        border-bottom: 1px solid #5ffcad;
-        /* background-color: #801af528; */
-        padding: 20px 20px;
-        padding-right: 130px;
-        cursor: pointer;
-    }
-    #register:hover span{
-        color: #5fddfc;
-    }
-    #register > span::after{
-        position: absolute;
-        content: "NOW";
-        right: 0px;
-        opacity: 0;
-        color: #5fddfc;
-        transition-duration: 0.4s;
-    }
-    #register:hover span::after{
-        right: -110px;
-        opacity: 1;
-    }
-    #contact{
-        margin-top: 300px;
-    }
-    .day{
-        width: 600px;
-        height: 254px;
-    }
-    .day > .content > .activity{
-        flex-flow: row wrap;
-    }
-    article{
-        height: 400px;
-    }
-}
-@media only screen and (max-width: 720px)
-{
-    #heroR{
-        display: inline-flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
-    #slogan{
-        margin-top: 50px;
-        font-size: 20pt;
-    }
-    #slogan > span{
-        font-size: 30pt;
-    }
-    #slogan:hover{
-        padding: 0px 30px;
-        border-left: 2px solid white;
-        border-right: 2px solid white;
-    }
-    #register:hover{
-        border-top: 1px solid #5ffcad;
-        border-bottom: 1px solid #5ffcad;
-        /* background-color: #801af528; */
-        padding: 20px 20px;
-        padding-bottom: 95px;
-        cursor: pointer;
-    }
-    #register:hover span{
-        color: #5fddfc;
-    }
-    #register > span::after{
-        position: absolute;
-        content: "\ANOW";
-        top: 0px;
-        left: 50px;
-        opacity: 0;
-        color: #5fddfc;
-        transition-duration: 0.4s;
-    }
-    #register:hover span::after{
-        top: 75px;
-        opacity: 1;
-    }
-    .day{
-        width: 100vw;
-        height: 400px;
-    }
-    .day > .content > .activity{
-        flex-flow: column wrap;
-    }
-    article{
-        height: 500px;
-    }
+    align-items: center;
+    overflow: hidden;
+  }
+  #slogan {
+    margin-top: 50px;
+    font-size: 20pt;
+  }
+  #slogan > span {
+    font-size: 30pt;
+  }
+  #slogan:hover {
+    padding: 0px 30px;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+  }
+  #register:hover {
+    border-top: 1px solid #5ffce7;
+    border-bottom: 1px solid #5ffce7;
+    /* background-color: #801af528; */
+    padding: 20px 20px;
+    padding-bottom: 95px;
+    cursor: pointer;
+  }
+  #register:hover span {
+    color: #5fddfc;
+  }
+  #register > span::after {
+    position: absolute;
+    content: "\ANOW";
+    top: 0px;
+    left: 50px;
+    opacity: 0;
+    color: #5fddfc;
+    transition-duration: 0.4s;
+  }
+  #register:hover span::after {
+    top: 75px;
+    opacity: 1;
+  }
+  .day {
+    width: 100vw;
+    height: 400px;
+  }
+  .day > .content > .activity {
+    flex-flow: column wrap;
+  }
+  article {
+    height: 500px;
+  }
 }

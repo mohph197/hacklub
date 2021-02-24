@@ -1,106 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
     <title>Hacklub</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <div id="main">
-        <header>
-            <div id="heroR">
-                <img id="logo" src="img/LOGO.png" alt="The Logo" height="200px">
-                <div id="slogan"><span>R</span>ISE YOUR CLUB<br>AND<br>HEAD TO THE TOP</div>
+      <header>
+        <div id="heroR">
+          <img id="logo" src="img/LOGO.png" alt="The Logo" height="200px" />
+          <div id="slogan">
+            <span>R</span>ISE YOUR CLUB<br />AND<br />HEAD TO THE TOP
+          </div>
+        </div>
+        <div id="registerR">
+          <a>
+            <button id="register"><span>Register </span></button>
+          </a>
+        </div>
+      </header>
+      <section id="about">
+        <article>
+          <div
+            class="title"
+            onmouseover="onArticle(0)"
+            onmouseout="offArticle(0)"
+          >
+            ABOUT US
+            <div class="flexBorder"></div>
+          </div>
+          <div
+            class="content"
+            onmouseover="onArticle(0)"
+            onmouseout="offArticle(0)"
+          >
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
+            quo a quidem cum repellendus quos dolore libero sapiente inventore
+            eos eum officiis, nobis veniam molestiae doloribus quis beatae
+            delectus perferendis?
+          </div>
+        </article>
+        <article>
+          <div
+            class="title"
+            onmouseover="onArticle(1)"
+            onmouseout="offArticle(1)"
+          >
+            <!-- <div class="mask"></div> -->
+            ABOUT THE EVENT
+            <div class="flexBorder"></div>
+          </div>
+          <div
+            class="content"
+            onmouseover="onArticle(1)"
+            onmouseout="offArticle(1)"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quam
+            doloribus ab labore voluptate consectetur qui rem magnam consequatur
+            facilis? Iusto earum delectus explicabo voluptatum ducimus iste
+            ipsum cum a necessitatibus neque. Itaque, illo perferendis. Sapiente
+            aperiam sed animi rerum.
+          </div>
+        </article>
+      </section>
+      <section id="agenda">
+        <div id="agendaTitleR">
+          <h1 id="agendaTitle">Agenda</h1>
+        </div>
+        <div id="daysR">
+          <div class="daySpace">
+            <div class="day">
+              <div class="num" onmouseover="onDay(0)" onmouseout="offDay(0)">
+                Day 1
+              </div>
+              <div
+                class="content"
+                onmouseover="onDay(0)"
+                onmouseout="offDay(0)"
+              >
+                <div class="activity">
+                  <div>HH:MM - HH:MM</div>
+                  <div>Activity Description</div>
+                </div>
+                <div class="activity">
+                  <div>HH:MM - HH:MM</div>
+                  <div>Activity Description</div>
+                </div>
+                <div class="activity">
+                  <div>HH:MM - HH:MM</div>
+                  <div>Activity Description</div>
+                </div>
+              </div>
             </div>
-            <div id="registerR">
-                <a>
-                    <button id="register"><span>Register </span></button>
-                </a>
+          </div>
+          <div class="daySpace">
+            <div class="day">
+              <div class="num" onmouseover="onDay(1)" onmouseout="offDay(1)">
+                Day 2
+              </div>
+              <div
+                class="content"
+                onmouseover="onDay(1)"
+                onmouseout="offDay(1)"
+              >
+                <div class="activity">
+                  <div>HH:MM - HH:MM</div>
+                  <div>Activity Description</div>
+                </div>
+                <div class="activity">
+                  <div>HH:MM - HH:MM</div>
+                  <div>Activity Description</div>
+                </div>
+                <div class="activity">
+                  <div>HH:MM - HH:MM</div>
+                  <div>Activity Description</div>
+                </div>
+              </div>
             </div>
-        </header>
-        <section id="about">
-            <article>
-                <div class="title" onmouseover="onArticle(0)" onmouseout="offArticle(0)">
-                    <!-- <div class="mask"></div> -->
-                    ABOUT US
-                </div>
-                <div class="content" onmouseover="onArticle(0)" onmouseout="offArticle(0)">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur quo a quidem cum repellendus quos dolore libero sapiente inventore eos eum officiis, nobis veniam molestiae doloribus quis beatae delectus perferendis?
-                </div>
-            </article>
-            <article>
-                <div class="title" onmouseover="onArticle(1)" onmouseout="offArticle(1)">
-                    <!-- <div class="mask"></div> -->
-                    ABOUT THE EVENT
-                </div>
-                <div class="content" onmouseover="onArticle(1)" onmouseout="offArticle(1)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quam doloribus ab labore voluptate consectetur qui rem magnam consequatur facilis? Iusto earum delectus explicabo voluptatum ducimus iste ipsum cum a necessitatibus neque. Itaque, illo perferendis. Sapiente aperiam sed animi rerum.
-                </div>
-            </article>
-        </section>
-        <section id="agenda">
-            <div id="agendaTitleR">
-                <h1 id="agendaTitle">Agenda</h1>
-            </div>
-            <div id="daysR">
-                <div class="daySpace">
-                    <div class="day">
-                        <div class="num" onmouseover="onDay(0)" onmouseout="offDay(0)">Day 1</div>
-                        <div class="content" onmouseover="onDay(0)" onmouseout="offDay(0)">
-                            <div class="activity"><div>HH:MM - HH:MM</div><div>Activity Descriptionlhlmhmlkhklklk</div></div>
-                            <div class="activity"><div>HH:MM - HH:MM</div><div>Activity Description</div></div>
-                            <div class="activity"><div>HH:MM - HH:MM</div><div>Activity Description</div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="daySpace">
-                    <div class="day">
-                        <div class="num" onmouseover="onDay(1)" onmouseout="offDay(1)">Day 2</div>
-                        <div class="content" onmouseover="onDay(1)" onmouseout="offDay(1)">
-                            <div class="activity"><div>HH:MM - HH:MM</div><div>Activity Description</div></div>
-                            <div class="activity"><div>HH:MM - HH:MM</div><div>Activity Description</div></div>
-                            <div class="activity"><div>HH:MM - HH:MM</div><div>Activity Description</div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="workshopsR">
-            <button id="pre" onclick="preOne()">Previous</button>
-            <div class="workshop">
-                <div class="title">Workshop 1</div>
-                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem consequuntur quod delectus aut aliquid porro beatae at reprehenderit doloribus voluptas?</div>
-            </div>
-            <div class="workshop" id="init1">
-                <div class="title">Workshop 2</div>
-                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem consequuntur quod delectus aut aliquid porro beatae at reprehenderit doloribus voluptas?</div>
-            </div>
-            <div class="workshop" id="init2">
-                <div class="title">Workshop 3</div>
-                <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem consequuntur quod delectus aut aliquid porro beatae at reprehenderit doloribus voluptas?</div>
-            </div>
-            <button id="next" onclick="nextOne()">Next</button>
-        </section>
-        <footer id="contact">
-            <div id="detailsR">
-                <div class="detail">
-                    <a href="#" class="fa fa-facebook"></a>
-                </div>
-                <div class="detail">
-                    <a href="#" class="fa fa-twitter"></a>
-                </div>
-                <div class="detail">
-                    <a href="#" class="fa fa-instagram"></a>
-                </div>
-                <div class="detail">
-                    <a href="#" class="fa fa-youtube-play"></a>
-                </div>
-                <div class="detail">
-                    <a href="#" class="fa fa-linkedin"></a>
-                </div>
-            </div>
-        </footer>
+          </div>
+        </div>
+      </section>
+      <section id="workshopsR">
+        <div id="pre">
+          <button onclick="preOne()">
+            <img src="img/previous.png" alt="Previous" width="30px" />
+          </button>
+        </div>
+        <div class="workshop">
+          <div class="title">Workshop 1</div>
+          <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+            consequuntur quod delectus aut aliquid porro beatae at reprehenderit
+            doloribus voluptas?
+          </div>
+        </div>
+        <div class="workshop" id="init1">
+          <div class="title">Workshop 2</div>
+          <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+            consequuntur quod delectus aut aliquid porro beatae at reprehenderit
+            doloribus voluptas?
+          </div>
+        </div>
+        <div class="workshop" id="init2">
+          <div class="title">Workshop 3</div>
+          <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+            consequuntur quod delectus aut aliquid porro beatae at reprehenderit
+            doloribus voluptas?
+          </div>
+        </div>
+        <div id="next">
+          <button onclick="nextOne()">
+            <img src="img/next.png" alt="Next" width="30px" />
+          </button>
+        </div>
+      </section>
+      <footer id="contact">
+        <div id="detailsR">
+          <div class="detail">
+            <a href="#" class="fa fa-facebook"></a>
+          </div>
+          <div class="detail">
+            <a href="#" class="fa fa-twitter"></a>
+          </div>
+          <div class="detail">
+            <a href="#" class="fa fa-instagram"></a>
+          </div>
+          <div class="detail">
+            <a href="#" class="fa fa-youtube-play"></a>
+          </div>
+          <div class="detail">
+            <a href="#" class="fa fa-linkedin"></a>
+          </div>
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
