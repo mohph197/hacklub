@@ -19,8 +19,10 @@ body{
 #main{
     background: radial-gradient(circle at 100% 100%, #f36b1ccc, #ff0166cc, #2d27fbcc, #2d27fbcc);
 }
+a{text-decoration: none;}
 header{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
@@ -30,8 +32,9 @@ header{
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
 }
-img{
+#logo{
     transition-duration: 0.5s;
 }
 #slogan{
@@ -45,9 +48,31 @@ img{
     letter-spacing: 2pt;
     transition-duration: 0.5s;
 }
+#registerR{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+#register{
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    transition-duration: 0.4s;
+}
+#register > span{
+    position: relative;
+    font-weight: bold;
+    font-family: hFont;
+    font-size: 30pt;
+    letter-spacing: 2pt;
+    color: white;
+    transition-duration: 0.4s;
+}
 #agendaTitleR{
     display: flex;
-    flex-flow: row nowrap;
+    margin-top: 50px;
     justify-content: center;
     align-items: center;
     height: 150px;
@@ -65,7 +90,6 @@ img{
     color: #5ffcadb4;
 }
 #daysR{
-    margin-top: 20px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -75,8 +99,6 @@ img{
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    width: 300px;
-    height: 254px;
     overflow: hidden;
     font-size: 20pt;
     color: white;
@@ -95,15 +117,17 @@ img{
     flex-flow: column nowrap;
     justify-content: center;
     overflow: hidden;
-    height: 0px;
+    height: 0%;
     transition-duration: 0.2s;
 }
-.day > .content > div{
+.day > .content > .activity{
+    display: flex;
+    justify-content: space-around;
     font-weight: lighter;
     padding: 10px 0px;
     transition-duration: 0.2s;
 }
-.day > .content > div:hover{
+.day > .content > .activity:hover{
     color: black;
     background-color: white;
     cursor: pointer;
@@ -113,10 +137,10 @@ img{
     flex-flow: row wrap;
     justify-content: space-around;
     font-size: 20pt;
+    margin-top: 50px;
 }
 article{
     width: 600px;
-    height: 620px;
     margin: 10px;
     display: flex;
     flex-flow: column nowrap;
@@ -149,6 +173,72 @@ article > .content{
 }
 article > .title:hover + .content{
     max-height: 400px;
+}
+#workshopsR{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 510px;
+}
+#workshopsR > button{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 20pt;
+    color: white;
+    transition-duration: 0.2s;
+}
+#workshopsR > #pre:hover{
+    padding-left: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #5ffcad;
+    color: #5ffcad;
+    cursor: pointer;
+}
+#workshopsR > #next:hover{
+    padding-right: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #5ffcad;
+    color: #5ffcad;
+    cursor: pointer;
+}
+.workshop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-color: #2e27fb31;
+    width: 400px;
+    height: 500px;
+    border-top: 2px solid #5ffcad;
+    border-bottom: 2px solid #5ffcad;
+    transition-duration: 0.4s;
+}
+#init1{
+    height: 0px;
+    width: 0px;
+    opacity: 0;
+}
+#init2{
+    height: 0px;
+    width: 0px;
+    opacity: 0;
+}
+.workshop > .title{
+    color: #5ffcad;
+    border-bottom: 2px solid #5ffcad;
+    padding: 10px 10px;
+    font-size: 22pt;
+    font-family: hFont;
+}
+.workshop > .content{
+    color: white;
+    font-size: 20pt;
+    padding: 0px 20px;
+    padding-top: 50px;
+    text-align: center;
 }
 #contact{
     margin-top: 50px;
@@ -211,6 +301,42 @@ article > .title:hover + .content{
         border-right: 3px solid white;
         padding-right: 50px;
     }
+    #register:hover{
+        border-top: 1px solid #5ffcad;
+        border-bottom: 1px solid #5ffcad;
+        /* background-color: #801af528; */
+        padding: 20px 20px;
+        padding-right: 130px;
+        cursor: pointer;
+    }
+    #register:hover span{
+        color: #5fddfc;
+    }
+    #register > span::after{
+        position: absolute;
+        content: "NOW";
+        right: 0px;
+        opacity: 0;
+        color: #5fddfc;
+        transition-duration: 0.4s;
+    }
+    #register:hover span::after{
+        right: -110px;
+        opacity: 1;
+    }
+    #contact{
+        margin-top: 300px;
+    }
+    .day{
+        width: 600px;
+        height: 254px;
+    }
+    .day > .content > .activity{
+        flex-flow: row wrap;
+    }
+    article{
+        height: 400px;
+    }
 }
 @media only screen and (max-width: 720px)
 {
@@ -232,5 +358,39 @@ article > .title:hover + .content{
         padding: 0px 30px;
         border-left: 2px solid white;
         border-right: 2px solid white;
+    }
+    #register:hover{
+        border-top: 1px solid #5ffcad;
+        border-bottom: 1px solid #5ffcad;
+        /* background-color: #801af528; */
+        padding: 20px 20px;
+        padding-bottom: 95px;
+        cursor: pointer;
+    }
+    #register:hover span{
+        color: #5fddfc;
+    }
+    #register > span::after{
+        position: absolute;
+        content: "\ANOW";
+        top: 0px;
+        left: 50px;
+        opacity: 0;
+        color: #5fddfc;
+        transition-duration: 0.4s;
+    }
+    #register:hover span::after{
+        top: 75px;
+        opacity: 1;
+    }
+    .day{
+        width: 100vw;
+        height: 400px;
+    }
+    .day > .content > .activity{
+        flex-flow: column wrap;
+    }
+    article{
+        height: 500px;
     }
 }
