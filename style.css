@@ -29,11 +29,15 @@ a {
   text-decoration: none;
 }
 header {
+  background-image: url("img/heroBackground.jpg");
+  /* background-repeat: no-repeat; */
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background-size: cover;
 }
 #heroR {
   display: inline-flex;
@@ -112,6 +116,7 @@ header {
   justify-content: flex-start;
   overflow: hidden;
   font-size: 20pt;
+  height: 1000px;
   color: white;
 }
 .day > .num {
@@ -126,17 +131,21 @@ header {
   border-bottom: 2px solid white;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: hidden;
   height: 0%;
-  transition-duration: 0.2s;
+  transition-duration: 0.4s;
 }
 .day > .content > .activity {
   display: flex;
+  flex-flow: column wrap;
   justify-content: space-around;
   font-weight: lighter;
   padding: 10px 0px;
   transition-duration: 0.2s;
+}
+.day > .content > .activity > .time{
+  color: #f8fc02;
 }
 .day > .content > .activity:hover {
   color: black;
@@ -198,13 +207,33 @@ article > .title:hover + .content {
   border-bottom: 2px solid #5ffce7;
   border-left: 2px solid #5ffce7;
 }
+#workshops{
+  min-height: 100vh;
+}
+#workshopsTitleR{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+#workshopsTitle{
+  font-size: 30pt;
+  font-family: hFont;
+  color: white;
+  transition-duration: 0.2s;
+}
+#workshopsTitle:hover{
+  border-bottom: 1px solid #5ffce7;
+  border-top: 1px solid #5ffce7;
+  padding: 20px 10px;
+  color: #5ffce7b4;
+}
 #workshopsR {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   /* height: 510px; */
-  min-height: 100vh;
 }
 #workshopsR > #next,
 #workshopsR > #pre {
@@ -280,7 +309,6 @@ article > .title:hover + .content {
   text-align: center;
 }
 #contact {
-  margin-top: 50px;
   background-color: #2d27fb60;
   padding: 30px 0px;
 }
@@ -374,10 +402,6 @@ article > .title:hover + .content {
   }
   .day {
     width: 600px;
-    height: 254px;
-  }
-  .day > .content > .activity {
-    flex-flow: row wrap;
   }
   article {
     height: 400px;
@@ -429,10 +453,6 @@ article > .title:hover + .content {
   }
   .day {
     width: 100vw;
-    height: 400px;
-  }
-  .day > .content > .activity {
-    flex-flow: column wrap;
   }
   article {
     height: 500px;

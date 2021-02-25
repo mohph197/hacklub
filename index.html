@@ -8,6 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/miniLogo.png">
     <script src="script.js"></script>
     <title>Hacklub</title>
   </head>
@@ -87,16 +88,28 @@
                 onmouseout="offDay(0)"
               >
                 <div class="activity">
-                  <div>HH:MM - HH:MM</div>
-                  <div>Activity Description</div>
+                  <div class="time">08:00 - 08:30</div>
+                  <div>Check In</div>
                 </div>
                 <div class="activity">
-                  <div>HH:MM - HH:MM</div>
-                  <div>Activity Description</div>
+                  <div class="time">08:30 - 09:00</div>
+                  <div>Opening Ceremony</div>
                 </div>
                 <div class="activity">
-                  <div>HH:MM - HH:MM</div>
-                  <div>Activity Description</div>
+                  <div class="time">09:00 - 10:00</div>
+                  <div>Conference:<br>The Importance of university clubs in student's educational path</div>
+                </div>
+                <div class="activity">
+                  <div class="time">10:30 - 12:00</div>
+                  <div>Workshops:<br>Web Design/How to get your first professional partner</div>
+                </div>
+                <div class="activity">
+                  <div class="time">12:00 - 14:00</div>
+                  <div>Lunch Break</div>
+                </div>
+                <div class="activity">
+                  <div class="time">14:00 - 16:00</div>
+                  <div>Workshops:<br>Rebranding in modern design/Dive into the world of motion graphics</div>
                 </div>
               </div>
             </div>
@@ -112,56 +125,83 @@
                 onmouseout="offDay(1)"
               >
                 <div class="activity">
-                  <div>HH:MM - HH:MM</div>
-                  <div>Activity Description</div>
+                  <div class="time">08:00 - 08:30</div>
+                  <div>Check In</div>
                 </div>
                 <div class="activity">
-                  <div>HH:MM - HH:MM</div>
-                  <div>Activity Description</div>
+                  <div class="time">08:45 - 09:30</div>
+                <div>Announce the department's challenges</div>
                 </div>
                 <div class="activity">
-                  <div>HH:MM - HH:MM</div>
-                  <div>Activity Description</div>
+                  <div class="time">09:30 - 10:00</div>
+                  <div>Team building</div>
+                </div>
+                <div class="activity">
+                  <div class="time">10:00 - 12:00</div>
+                  <div>Challenges kick off</div>
+                </div>
+                <div class="activity">
+                  <div class="time">12:00 - 14:00</div>
+                  <div>Lunch Break</div>
+                </div>
+                <div class="activity">
+                  <div class="time">14:00 - 15:00</div>
+                  <div>Mentoring</div>
+                </div>
+                <div class="activity">
+                  <div class="time">16:00 - 16:30</div>
+                  <div>Coffee Break</div>
+                </div>
+                <div class="activity">
+                  <div class="time">16:30 - 17:00</div>
+                  <div>Closing Ceremony</div>
+                </div>
+                <div class="activity">
+                  <div class="time">17:00 - 17:30</div>
+                  <div>Announcing the winning team</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section id="workshopsR">
-        <div id="pre">
-          <button onclick="preOne()">
-            <img src="img/previous.png" alt="Previous" width="30px" />
-          </button>
-        </div>
-        <div class="workshop">
-          <div class="title">Workshop 1</div>
-          <div class="content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-            consequuntur quod delectus aut aliquid porro beatae at reprehenderit
-            doloribus voluptas?
+      <section id="workshops">
+        <div id="workshopsTitleR"><div id="workshopsTitle">WORKSHOPS</div></div>
+        <div id="workshopsR">
+          <div id="pre">
+            <button onclick="preOne()">
+              <img src="img/previous.png" alt="Previous" width="30px" />
+            </button>
           </div>
-        </div>
-        <div class="workshop" id="init1">
-          <div class="title">Workshop 2</div>
-          <div class="content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-            consequuntur quod delectus aut aliquid porro beatae at reprehenderit
-            doloribus voluptas?
+          <div class="workshop">
+            <div class="title">Workshop 1</div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+              consequuntur quod delectus aut aliquid porro beatae at reprehenderit
+              doloribus voluptas?
+            </div>
           </div>
-        </div>
-        <div class="workshop" id="init2">
-          <div class="title">Workshop 3</div>
-          <div class="content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-            consequuntur quod delectus aut aliquid porro beatae at reprehenderit
-            doloribus voluptas?
+          <div class="workshop" id="init1">
+            <div class="title">Workshop 2</div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+              consequuntur quod delectus aut aliquid porro beatae at reprehenderit
+              doloribus voluptas?
+            </div>
           </div>
-        </div>
-        <div id="next">
-          <button onclick="nextOne()">
-            <img src="img/next.png" alt="Next" width="30px" />
-          </button>
+          <div class="workshop" id="init2">
+            <div class="title">Workshop 3</div>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+              consequuntur quod delectus aut aliquid porro beatae at reprehenderit
+              doloribus voluptas?
+            </div>
+          </div>
+          <div id="next">
+            <button onclick="nextOne()">
+              <img src="img/next.png" alt="Next" width="30px" />
+            </button>
+          </div>
         </div>
       </section>
       <footer id="contact">
