@@ -66,28 +66,50 @@ var count = 0;
 function nextOne()
 {
     var workshop = document.getElementsByClassName("workshop");
+    var workshopTrackers = document.getElementsByClassName("miniBar");
     if(count < 3)
     {
         count++;
-        // workshop[count - 1].style.height = "0px";
         workshop[count - 1].style.width = "0px";
         workshop[count - 1].style.opacity = "0";
-        // workshop[count].style.height = "500px";
+        workshopTrackers[count - 1].style.backgroundColor = "#ffffff1f";
         workshop[count].style.width = "400px";
         workshop[count].style.opacity = "1";
+        workshopTrackers[count].style.backgroundColor = "#5ffcef";
+    } else
+    {
+        count = 0;
+        workshop[3].style.width = "0px";
+        workshop[3].style.opacity = "0";
+        workshopTrackers[3].style.backgroundColor = "#ffffff1f";
+        workshop[count].style.width = "400px";
+        workshop[count].style.opacity = "1";
+        workshopTrackers[count].style.backgroundColor = "#5ffcef";
     }
+        
+    
 }
 function preOne()
 {
     var workshop = document.getElementsByClassName("workshop");
+    var workshopTrackers = document.getElementsByClassName("miniBar");
     if(count > 0)
     {
-        // workshop[count - 1].style.height = "500px";
         workshop[count - 1].style.width = "400px";
         workshop[count - 1].style.opacity = "1";
-        // workshop[count].style.height = "0px";
+        workshopTrackers[count - 1].style.backgroundColor = "#5ffcef";
         workshop[count].style.width = "0px";
         workshop[count].style.opacity = "0";
+        workshopTrackers[count].style.backgroundColor = "#ffffff1f";
         count--;
+    } else
+    {
+        workshop[3].style.width = "400px";
+        workshop[3].style.opacity = "1";
+        workshopTrackers[3].style.backgroundColor = "#5ffcef";
+        workshop[count].style.width = "0px";
+        workshop[count].style.opacity = "0";
+        workshopTrackers[count].style.backgroundColor = "#ffffff1f";
+        count=3;
     }
 }
