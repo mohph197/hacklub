@@ -131,7 +131,7 @@ header {
   overflow: hidden;
   font-family: hFont;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
   letter-spacing: 2pt;
   transition-duration: 0.5s;
 }
@@ -501,7 +501,7 @@ header {
   background-color: #0077b5;
   color: white;
 }
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 768px) {
   #slogan {
     width: 0%;
     font-size: 30pt;
@@ -546,7 +546,7 @@ header {
     width: 600px;
   }
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 768px) {
   nav .logo {
     float: none;
     width: auto;
@@ -596,15 +596,20 @@ header {
   }
   #slogan {
     margin-top: 50px;
+    margin-bottom: 20px;
     font-size: 20pt;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
   }
   #slogan > span {
     font-size: 30pt;
   }
   #slogan:hover {
-    padding: 0px 30px;
-    border-left: 2px solid white;
-    border-right: 2px solid white;
+    padding: 20px 0px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    border-top-color: white;
+    border-bottom-color: white;
   }
   #register:hover {
     border-top: 1px solid #5ffce7;
