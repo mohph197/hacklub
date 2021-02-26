@@ -44,7 +44,7 @@ var count = 0;
 function nextOne()
 {
     var workshop = document.getElementsByClassName("workshop");
-    if(count < 2)
+    if(count < 3)
     {
         count++;
         // workshop[count - 1].style.height = "0px";

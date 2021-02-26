@@ -8,7 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="img/miniLogo.png">
+    <link rel="icon" href="img/miniLogo.png" />
     <script src="script.js"></script>
     <title>Hacklub</title>
   </head>
@@ -29,31 +29,11 @@
         </div>
       </header>
       <section id="about">
-        <article>
+        <article id="aboutEvent">
           <div
             class="title"
             onmouseover="onArticle(0)"
             onmouseout="offArticle(0)"
-          >
-            ABOUT US
-            <div class="flexBorder"></div>
-          </div>
-          <div
-            class="content"
-            onmouseover="onArticle(0)"
-            onmouseout="offArticle(0)"
-          >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
-            quo a quidem cum repellendus quos dolore libero sapiente inventore
-            eos eum officiis, nobis veniam molestiae doloribus quis beatae
-            delectus perferendis?
-          </div>
-        </article>
-        <article>
-          <div
-            class="title"
-            onmouseover="onArticle(1)"
-            onmouseout="offArticle(1)"
           >
             <!-- <div class="mask"></div> -->
             ABOUT THE EVENT
@@ -61,14 +41,59 @@
           </div>
           <div
             class="content"
+            onmouseover="onArticle(0)"
+            onmouseout="offArticle(0)"
+          >
+            Hacklub, a two days event organized by CSE, will take place at ESI.
+            It will have a conference about: How to create a club and the
+            importance of it. In addition to different workshops and challenges
+            from different departments that a club can have. The participants
+            will be devised into different teams, the team who collects more
+            points from participating in the challenges will be the winning one.
+            Which will get a special gift from our club at the end.
+          </div>
+        </article>
+        <article id="faq">
+          <div
+            class="title"
             onmouseover="onArticle(1)"
             onmouseout="offArticle(1)"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quam
-            doloribus ab labore voluptate consectetur qui rem magnam consequatur
-            facilis? Iusto earum delectus explicabo voluptatum ducimus iste
-            ipsum cum a necessitatibus neque. Itaque, illo perferendis. Sapiente
-            aperiam sed animi rerum.
+            FAQ
+            <div class="flexBorder"></div>
+          </div>
+          <div
+            class="content"
+            onmouseover="onArticle(1)"
+            onmouseout="offArticle(1)"
+          >
+            <strong style="font-size: 22pt"
+              >Why should you join the event?</strong
+            ><br />
+            If you’re interested in creating a new club we will guide you
+            through by showing you all the steps you need to pass by and if
+            you’re already a member in one we will help you to improve your
+            club’s workflow by the different workshops and challenges that we
+            will provide.<br />
+
+            <strong style="font-size: 22pt">Who can join?</strong><br />
+            Everyone can join the event, mostly students who would like to learn
+            more about how to create a new club or improve the workflow of their
+            club.<br />
+
+            <strong style="font-size: 22pt">How to join?</strong><br />
+            All you need to do is to fill the registration form.<br />
+
+            <strong style="font-size: 22pt">Where will it take place?</strong
+            ><br />
+            It will take place at ESI ecole nationale supérieure
+            d’informatique.<br />
+
+            <strong style="font-size: 22pt"
+              >What if I don’t have a team for the challenge?</strong
+            ><br />
+            Not to worry, we will help you find teammates after announcing the
+            challenges.<br />
           </div>
         </article>
       </section>
@@ -97,11 +122,17 @@
                 </div>
                 <div class="activity">
                   <div class="time">09:00 - 10:00</div>
-                  <div>Conference:<br>The Importance of university clubs in student's educational path</div>
+                  <div>
+                    Conference:<br />The Importance of university clubs in
+                    student's educational path
+                  </div>
                 </div>
                 <div class="activity">
                   <div class="time">10:30 - 12:00</div>
-                  <div>Workshops:<br>Web Design/How to get your first professional partner</div>
+                  <div>
+                    Workshops:<br />Web Design/How to get your first
+                    professional partner
+                  </div>
                 </div>
                 <div class="activity">
                   <div class="time">12:00 - 14:00</div>
@@ -109,7 +140,10 @@
                 </div>
                 <div class="activity">
                   <div class="time">14:00 - 16:00</div>
-                  <div>Workshops:<br>Rebranding in modern design/Dive into the world of motion graphics</div>
+                  <div>
+                    Workshops:<br />Rebranding in modern design/Dive into the
+                    world of motion graphics
+                  </div>
                 </div>
               </div>
             </div>
@@ -130,7 +164,7 @@
                 </div>
                 <div class="activity">
                   <div class="time">08:45 - 09:30</div>
-                <div>Announce the department's challenges</div>
+                  <div>Announce the department's challenges</div>
                 </div>
                 <div class="activity">
                   <div class="time">09:30 - 10:00</div>
@@ -174,27 +208,42 @@
             </button>
           </div>
           <div class="workshop">
-            <div class="title">Workshop 1</div>
+            <div class="title">
+              Web Design<br />How To Make a Club's Website
+            </div>
             <div class="content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-              consequuntur quod delectus aut aliquid porro beatae at reprehenderit
-              doloribus voluptas?
+              The dev department will hold this workshop. They will guide you
+              through ot learn all about how to make a website for your club.<br />Don't
+              Miss It
             </div>
           </div>
           <div class="workshop" id="init1">
-            <div class="title">Workshop 2</div>
+            <div class="title">
+              How To Get<br />Yout First Professional Partner
+            </div>
             <div class="content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-              consequuntur quod delectus aut aliquid porro beatae at reprehenderit
-              doloribus voluptas?
+              Club, events, a lot of stuff to buy! Well, you probably need money
+              for that! But the real question is how could your club find its
+              first sponsors? Well, you should join this workshop to know all
+              about that and how to get your first professional partner.
             </div>
           </div>
           <div class="workshop" id="init2">
-            <div class="title">Workshop 3</div>
+            <div class="title">Branding In Modern Design</div>
             <div class="content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-              consequuntur quod delectus aut aliquid porro beatae at reprehenderit
-              doloribus voluptas?
+              Create a name, symbol or DESIGN that identifies and differentiates
+              a product from other products. That what you will learn in this
+              workshop. If you want to know how you can create all this for your
+              club, you shouldn’t miss this workshop by any chance.
+            </div>
+          </div>
+          <div class="workshop" id="init3">
+            <div class="title">Dive Into The World Of Motion Graphics</div>
+            <div class="content">
+              The multimedia department will organise another workshop. You’ll
+              learn all about how to make a video and animation, graphics
+              drawings and images and a lot of other things. A wonderful work
+              not to be missed!
             </div>
           </div>
           <div id="next">
