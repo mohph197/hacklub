@@ -28,6 +28,70 @@ body {
 a {
   text-decoration: none;
 }
+nav {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 0 5%;
+  height: 100px;
+  background-color: #277cfb8e;
+}
+#logo-image-c {
+  display: inline-flex;
+  height: 100px;
+  align-items: center;
+}
+nav .links {
+  float: right;
+  padding: 0;
+  margin: 0;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .links li {
+  list-style: none;
+  display: inline;
+}
+nav .links a {
+  display: block;
+  padding: 1em;
+  font-size: 16pt;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+nav li a:hover {
+  /* background-color: #9400D3; */
+  border-bottom-color: #5ffce7;
+  /* width: 100px;
+	height: 70px; */
+  text-align: center;
+}
+#nav-toggle {
+  position: absolute;
+  top: -100px;
+}
+nav .icon-burger {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav .icon-burger .line {
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
 header {
   background-image: url("img/heroBackground.jpg");
   /* background-repeat: no-repeat; */
@@ -36,7 +100,9 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  /* min-height: 100vh; */
   background-size: cover;
   box-shadow: 0px 10px 20px #022546;
 }
@@ -84,11 +150,12 @@ header {
   transition-duration: 0.2s;
 }
 #agenda {
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  padding-top: 100px;
 }
 #agendaTitleR {
   display: flex;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   justify-content: center;
   align-items: center;
   height: 150px;
@@ -149,7 +216,7 @@ header {
   padding: 10px 0px;
   transition-duration: 0.2s;
 }
-.day > .content > .activity > .time{
+.day > .content > .activity > .time {
   color: #f8fc02;
 }
 .day > .content > .activity:hover {
@@ -158,25 +225,24 @@ header {
   border-left-color: #5ffce7;
   background-color: #2e27fb8c;
 }
-#about {
+#aboutC{
   display: flex;
-  flex-flow: column wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   font-size: 20pt;
-  margin-top: 50px;
-  min-height: 100vh;
+  padding-top: 150px;
+  /* min-height: 100vh; */
 }
-article {
+#about{
   width: 80%;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   /* margin: 10px; */
   display: flex;
   flex-flow: column nowrap;
   color: white;
   align-items: flex-start;
 }
-article > .title {
+#about > .title {
   position: relative;
   font-family: hFont;
   font-weight: bolder;
@@ -186,17 +252,17 @@ article > .title {
   padding-right: 10px;
   color: white;
 }
-article > .title > .flexBorder{
-    position: absolute;
-    bottom: 0px;
-    right: -2px;
-    height: 0px;
-    width: 0%;
-    border-right: 2px solid transparent;
-    border-bottom: 2px solid transparent;
-    transition-duration: 0.4s;
+#about > .title > .flexBorder {
+  position: absolute;
+  bottom: 0px;
+  right: -2px;
+  height: 0px;
+  width: 0%;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transition-duration: 0.4s;
 }
-article > .content {
+#about > .content {
   /* max-height: 78px; */
   position: relative;
   font-size: 20pt;
@@ -206,43 +272,88 @@ article > .content {
   /* overflow: hidden; */
   padding: 10px 10px;
   transition-duration: 0.4s;
- }
- article > .content > .flexBorder{
-   position: absolute;
-   left: 0px;
-   bottom: 0px;
-   width: 0%;
-   border-bottom: 2px solid transparent;
-   transition-duration: 0.6s;
- }
-/*article > .content:hover {
-  background-color: #27a6fb60;
-  box-shadow: 5px 5px 10px #022546c0;
-  border-bottom: 2px solid #5ffce7;
-  border-left: 2px solid #5ffce7;
 }
-article > .title:hover + .content {
-  background-color: #27a6fb60;
-  box-shadow: 5px 5px 10px #022546c0;
-  border-bottom: 2px solid #5ffce7;
-  border-left: 2px solid #5ffce7;
-} */
-#workshops{
-  min-height: 100vh;
+#about > .content > .flexBorder {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 0%;
+  border-bottom: 2px solid transparent;
+  transition-duration: 0.6s;
 }
-#workshopsTitleR{
+#faqC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #e227fb60; */
+  font-size: 20pt;
+  padding-top: 150px;
+  /* min-height: 100vh; */
+}
+#faq {
+  width: 80%;
+  /* margin-top: 50px; */
+  /* margin: 10px; */
+  display: flex;
+  flex-flow: column nowrap;
+  color: white;
+  align-items: flex-start;
+}
+#faq > .title {
+  position: relative;
+  font-family: hFont;
+  font-weight: bolder;
+  /* border-bottom: 2px solid white; */
+  /* padding-top: 20px; */
+  padding-bottom: 10px;
+  padding-right: 10px;
+  color: white;
+}
+#faq > .title > .flexBorder {
+  position: absolute;
+  bottom: 0px;
+  right: -2px;
+  height: 0px;
+  width: 0%;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transition-duration: 0.4s;
+}
+#faq > .content {
+  /* max-height: 78px; */
+  position: relative;
+  font-size: 20pt;
+  line-height: 40px;
+  border-left: 2px solid white;
+  /* border-bottom: 2px solid white; */
+  /* overflow: hidden; */
+  padding: 10px 10px;
+  transition-duration: 0.4s;
+}
+#faq > .content > .flexBorder {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 0%;
+  border-bottom: 2px solid transparent;
+  transition-duration: 0.6s;
+}
+#workshops {
+  padding-top: 100px;
+}
+#workshopsTitleR {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 150px;
 }
-#workshopsTitle{
+#workshopsTitle {
   font-size: 30pt;
   font-family: hFont;
   color: white;
   transition-duration: 0.2s;
 }
-#workshopsTitle:hover{
+#workshopsTitle:hover {
   border-bottom: 1px solid #5ffce7;
   border-top: 1px solid #5ffce7;
   padding: 20px 10px;
@@ -254,12 +365,10 @@ article > .title:hover + .content {
   justify-content: center;
   align-items: stretch;
   height: max-content;
-  /* height: 510px; */
 }
 #workshopsR > #next,
 #workshopsR > #pre {
   display: inline;
-  /* height: 600px; */
   position: relative;
   width: 50px;
 }
@@ -287,11 +396,6 @@ article > .title:hover + .content {
   width: 50px;
   cursor: pointer;
 }
-/* #workshopsR > #next:hover{
-    background-color: #5ffce7;
-    width: 80px;
-    cursor: pointer;
-} */
 .workshop {
   display: flex;
   flex-direction: column;
@@ -304,7 +408,9 @@ article > .title:hover + .content {
   border-bottom: 2px solid #5ffce7;
   transition-duration: 0.4s;
 }
-#init1, #init2, #init3{
+#init1,
+#init2,
+#init3 {
   /* height: 0px; */
   width: 0px;
   opacity: 0;
@@ -325,13 +431,13 @@ article > .title:hover + .content {
   text-align: center;
   white-space: nowrap;
 }
-#workshopsTracker{
+#workshopsTracker {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 10px;
 }
-#workshopsTracker > .miniBar{
+#workshopsTracker > .miniBar {
   height: 5px;
   width: 30px;
   margin: 5px;
@@ -340,7 +446,7 @@ article > .title:hover + .content {
 }
 #contact {
   background-color: #2d27fb60;
-  margin-top: 50px;
+  margin-top: 200px;
   padding: 30px 0px;
 }
 #detailsR {
@@ -433,6 +539,46 @@ article > .title:hover + .content {
   }
 }
 @media only screen and (max-width: 720px) {
+  nav .logo {
+    float: none;
+    width: auto;
+    justify-content: center;
+  }
+  nav .links {
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+  }
+  nav .links a {
+    font-size: 20px;
+  }
+  nav :checked ~ .links {
+    bottom: 0;
+  }
+  nav .icon-burger {
+    display: block;
+  }
+  nav :checked ~ .icon-burger .line:nth-child(1) {
+    transform: translateY(10px) rotate(225deg);
+  }
+  nav :checked ~ .icon-burger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+  }
+  nav :checked ~ .icon-burger .line:nth-child(2) {
+    opacity: 0;
+  }
   #heroR {
     display: inline-flex;
     flex-flow: column nowrap;

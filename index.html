@@ -15,7 +15,25 @@
 
   <body>
     <div id="main">
-      <header>
+      <nav>
+        <input id="nav-toggle" type="checkbox" />
+        <div id="logo-image-c">
+          <img src="img/LOGO.png" height="80px" />
+        </div>
+        <ul class="links">
+          <li><a href="#headerId">Home</a></li>
+          <li><a href="#aboutC">About</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#workshops">Workshops</a></li>
+          <li><a href="#faqC">FAQ</a></li>
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </label>
+      </nav>
+      <header id="headerId">
         <div id="heroR">
           <img id="logo" src="img/LOGO.png" alt="The Logo" height="200px" />
           <div id="slogan">
@@ -28,12 +46,12 @@
           </a>
         </div>
       </header>
-      <section id="about">
-        <article id="aboutEvent">
+      <section id="aboutC">
+        <article id="about">
           <div
             class="title"
-            onmouseover="onArticle(0)"
-            onmouseout="offArticle(0)"
+            onmouseover="onAbout()"
+            onmouseout="offAbout()"
           >
             <!-- <div class="mask"></div> -->
             ABOUT THE EVENT
@@ -41,8 +59,8 @@
           </div>
           <div
             class="content"
-            onmouseover="onArticle(0)"
-            onmouseout="offArticle(0)"
+            onmouseover="onAbout()"
+            onmouseout="offAbout()"
           >
             Hacklub, a two days event organized by CSE, will take place at ESI.
             It will have a conference about: How to create a club and the
@@ -54,7 +72,7 @@
             <div class="flexBorder"></div>
           </div>
         </article>
-        <article id="faq">
+        <!-- <article id="faq">
           <div
             class="title"
             onmouseover="onArticle(1)"
@@ -68,7 +86,7 @@
             onmouseover="onArticle(1)"
             onmouseout="offArticle(1)"
           >
-            <strong style="font-size: 22pt; border-bottom: 1px solid white;"
+            <strong style="font-size: 22pt; border-bottom: 1px solid white"
               >Why should you join the event?</strong
             ><br />
             If you’re interested in creating a new club we will guide you
@@ -77,27 +95,32 @@
             club’s workflow by the different workshops and challenges that we
             will provide.<br />
 
-            <strong style="font-size: 22pt; border-bottom: 1px solid white;">Who can join?</strong><br />
+            <strong style="font-size: 22pt; border-bottom: 1px solid white"
+              >Who can join?</strong
+            ><br />
             Everyone can join the event, mostly students who would like to learn
             more about how to create a new club or improve the workflow of their
             club.<br />
 
-            <strong style="font-size: 22pt; border-bottom: 1px solid white;">How to join?</strong><br />
+            <strong style="font-size: 22pt; border-bottom: 1px solid white"
+              >How to join?</strong
+            ><br />
             All you need to do is to fill the registration form.<br />
 
-            <strong style="font-size: 22pt; border-bottom: 1px solid white;">Where will it take place?</strong
+            <strong style="font-size: 22pt; border-bottom: 1px solid white"
+              >Where will it take place?</strong
             ><br />
             It will take place at ESI ecole nationale supérieure
             d’informatique.<br />
 
-            <strong style="font-size: 22pt; border-bottom: 1px solid white;"
+            <strong style="font-size: 22pt; border-bottom: 1px solid white"
               >What if I don’t have a team for the challenge?</strong
             ><br />
             Not to worry, we will help you find teammates after announcing the
             challenges.<br />
             <div class="flexBorder"></div>
           </div>
-        </article>
+        </article> -->
       </section>
       <section id="agenda">
         <div id="agendaTitleR">
@@ -211,40 +234,47 @@
           </div>
           <div class="workshop">
             <div class="title">
-              Web Design<br />How To Make a<br>Club's Website
+              Web Design<br />How To Make a<br />Club's Website
             </div>
             <div class="content">
-              The dev department will<br>hold this workshop.<br> They will guide you<br>
-              through<br>to learn all about how to<br>make a website<br>for your club.<br />Don't
-              Miss It
+              The dev department will<br />hold this workshop.<br />
+              They will guide you<br />
+              through<br />to learn all about how to<br />make a website<br />for
+              your club.<br />Don't Miss It
             </div>
           </div>
           <div class="workshop" id="init1">
             <div class="title">
-              How To Get<br />Yout First<br>Professional Partner
+              How To Get<br />Yout First<br />Professional Partner
             </div>
             <div class="content">
-              Club, events,<br>a lot of stuff to buy!<br>Well, you probably<br>need money
-              for that!<br>But the real question is<br>how could your club find<br>its
-              first sponsors?<br>Well, you should join<br>this workshop to know all<br>
-              about that and how to<br>get your first<br>professional partner.
+              Club, events,<br />a lot of stuff to buy!<br />Well, you
+              probably<br />need money for that!<br />But the real question
+              is<br />how could your club find<br />its first sponsors?<br />Well,
+              you should join<br />this workshop to know all<br />
+              about that and how to<br />get your first<br />professional
+              partner.
             </div>
           </div>
           <div class="workshop" id="init2">
-            <div class="title">Branding In<br>Modern Design</div>
+            <div class="title">Branding In<br />Modern Design</div>
             <div class="content">
-              Create a name,<br>symbol or DESIGN<br>that identifies and<br>differentiates<br>
-              a product from<br>other products.<br>That's what you will learn<br>in this
-              workshop.<br>If you want to know how<br>you can create all of this<br>for your
-              club, you shouldn’t<br>miss this workshop<br>by any chance.
+              Create a name,<br />symbol or DESIGN<br />that identifies and<br />differentiates<br />
+              a product from<br />other products.<br />That's what you will
+              learn<br />in this workshop.<br />If you want to know how<br />you
+              can create all of this<br />for your club, you shouldn’t<br />miss
+              this workshop<br />by any chance.
             </div>
           </div>
           <div class="workshop" id="init3">
-            <div class="title">Dive Into<br>The World Of<br>Motion Graphics</div>
+            <div class="title">
+              Dive Into<br />The World Of<br />Motion Graphics
+            </div>
             <div class="content">
-              The multimedia department<br>will organise<br>another workshop.<br>You’ll
-              learn all<br>about how to make<br>a video and animation,<br>graphics
-              drawings<br>and images and a lot<br>of other things.<br>A wonderful work<br>
+              The multimedia department<br />will organise<br />another
+              workshop.<br />You’ll learn all<br />about how to make<br />a
+              video and animation,<br />graphics drawings<br />and images and a
+              lot<br />of other things.<br />A wonderful work<br />
               not to be missed!
             </div>
           </div>
@@ -255,28 +285,99 @@
           </div>
         </div>
         <div id="workshopsTracker">
-          <div class="miniBar" style="background-color: #5ffce7;"></div>
+          <div class="miniBar" style="background-color: #5ffce7"></div>
           <div class="miniBar"></div>
           <div class="miniBar"></div>
           <div class="miniBar"></div>
         </div>
       </section>
+      <section id="faqC">
+        <article id="faq">
+          <div
+            class="title"
+            onmouseover="onFaq(0)"
+            onmouseout="offFaq(0)"
+          >
+            FAQ
+            <div class="flexBorder"></div>
+          </div>
+          <div
+            class="content"
+            onmouseover="onFaq(0)"
+            onmouseout="offFaq(0)"
+          >
+            <strong style="font-size: 22pt; border-bottom: 1px solid white"
+              >Why should you join the event?</strong
+            ><br />
+            If you’re interested in creating a new club we will guide you
+            through by showing you all the steps you need to pass by and if
+            you’re already a member in one we will help you to improve your
+            club’s workflow by the different workshops and challenges that we
+            will provide.<br />
+
+            <strong style="font-size: 22pt; border-bottom: 1px solid white"
+              >Who can join?</strong
+            ><br />
+            Everyone can join the event, mostly students who would like to learn
+            more about how to create a new club or improve the workflow of their
+            club.<br />
+
+            <strong style="font-size: 22pt; border-bottom: 1px solid white"
+              >How to join?</strong
+            ><br />
+            All you need to do is to fill the registration form.<br />
+
+            <strong style="font-size: 22pt; border-bottom: 1px solid white"
+              >Where will it take place?</strong
+            ><br />
+            It will take place at ESI ecole nationale supérieure
+            d’informatique.<br />
+
+            <strong style="font-size: 22pt; border-bottom: 1px solid white"
+              >What if I don’t have a team for the challenge?</strong
+            ><br />
+            Not to worry, we will help you find teammates after announcing the
+            challenges.<br />
+            <div class="flexBorder"></div>
+          </div>
+        </article>
+      </section>
       <footer id="contact">
         <div id="detailsR">
           <div class="detail">
-            <a href="https://www.facebook.com/club.scientifique.esi/" class="fa fa-facebook" target="_blank"></a>
+            <a
+              href="https://www.facebook.com/club.scientifique.esi/"
+              class="fa fa-facebook"
+              target="_blank"
+            ></a>
           </div>
           <div class="detail">
-            <a href="https://twitter.com/CSESI_Club" class="fa fa-twitter" target="_blank"></a>
+            <a
+              href="https://twitter.com/CSESI_Club"
+              class="fa fa-twitter"
+              target="_blank"
+            ></a>
           </div>
           <div class="detail">
-            <a href="https://www.instagram.com/cse.club/" class="fa fa-instagram" target="_blank"></a>
+            <a
+              href="https://www.instagram.com/cse.club/"
+              class="fa fa-instagram"
+              target="_blank"
+            ></a>
           </div>
           <div class="detail">
-            <a href="https://www.youtube.com/channel/UCHgeF6ELJW0Pt1vYoAomCig" class="fa fa-youtube-play" target="_blank"></a>
+            <a
+              href="https://www.youtube.com/channel/UCHgeF6ELJW0Pt1vYoAomCig"
+              class="fa fa-youtube-play"
+              target="_blank"
+            ></a>
           </div>
           <div class="detail">
-            <a href="https://www.linkedin.com/company/cse-club/" class="fa fa-linkedin" target="_blank"></a>
+            <a
+              href="https://www.linkedin.com/company/cse-club/"
+              class="fa fa-linkedin"
+              target="_blank"
+            ></a>
           </div>
         </div>
       </footer>

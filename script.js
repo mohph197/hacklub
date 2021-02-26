@@ -24,43 +24,81 @@ function offDay(index)
     daysNums[index].style.backgroundColor="transparent";
     daysNums[index].style.borderColor="white";
 }
-function onArticle(index)
+function onAbout()
 {
-    var articleTitle = document.querySelectorAll("article > .title");
-    var articleContent = document.querySelectorAll("article > .content");
-    var titleBorder = document.querySelectorAll("article > .title > .flexBorder");
-    var contentBorder = document.querySelectorAll("article > .content > .flexBorder");
-    articleTitle[index].style.color = "#5ffce7b4";
+    var articleTitle = document.querySelector("#about > .title");
+    var articleContent = document.querySelector("#about > .content");
+    var titleBorder = document.querySelector("#about > .title > .flexBorder");
+    var contentBorder = document.querySelector("#about > .content > .flexBorder");
+    articleTitle.style.color = "#5ffce7";
     // articleTitle[index].style.borderBottom = "2px solid #5ffce7";
-    articleContent[index].style.backgroundColor = "#27a6fb60";
-    articleContent[index].style.boxShadow = "5px 5px 10px #022546c0";
+    articleContent.style.backgroundColor = "#27a6fb60";
+    articleContent.style.boxShadow = "5px 5px 10px #022546c0";
     // articleContent[index].style.borderBottom = "2px solid #5ffce7";
-    articleContent[index].style.borderLeftColor = "#5ffce7";
-    contentBorder[index].style.width = "100%";
-    contentBorder[index].style.borderBottomColor = "#5ffce7";
-    titleBorder[index].style.height = "20px";
-    titleBorder[index].style.width = "100%";
-    titleBorder[index].style.borderRightColor = "#5ffce7";
-    titleBorder[index].style.borderBottomColor = "#5ffce7";
+    articleContent.style.borderLeftColor = "#5ffce7";
+    contentBorder.style.width = "100%";
+    contentBorder.style.borderBottomColor = "#5ffce7";
+    titleBorder.style.height = "20px";
+    titleBorder.style.width = "100%";
+    titleBorder.style.borderRightColor = "#5ffce7";
+    titleBorder.style.borderBottomColor = "#5ffce7";
 }
-function offArticle(index)
+function offAbout()
 {
-    var articleTitle = document.querySelectorAll("article > .title");
-    var articleContent = document.querySelectorAll("article > .content");
-    var titleBorder = document.querySelectorAll("article > .title > .flexBorder");
-    var contentBorder = document.querySelectorAll("article > .content > .flexBorder");
-    articleTitle[index].style.color = "white";
+    var articleTitle = document.querySelector("#about > .title");
+    var articleContent = document.querySelector("#about > .content");
+    var titleBorder = document.querySelector("#about > .title > .flexBorder");
+    var contentBorder = document.querySelector("#about > .content > .flexBorder");
+    articleTitle.style.color = "white";
     // articleTitle[index].style.borderBottom = "2px solid white";
-    articleContent[index].style.backgroundColor = "transparent";
-    articleContent[index].style.boxShadow = "none";
+    articleContent.style.backgroundColor = "transparent";
+    articleContent.style.boxShadow = "none";
     // articleContent[index].style.borderBottom = "none";
-    articleContent[index].style.borderLeftColor = "white";
-    contentBorder[index].style.width = "0%";
-    contentBorder[index].style.borderBottomColor = "transparent";
-    titleBorder[index].style.height = "0px";
-    titleBorder[index].style.width = "0%";
-    titleBorder[index].style.borderRightColor = "transparent";
-    titleBorder[index].style.borderBottomColor = "transparent";
+    articleContent.style.borderLeftColor = "white";
+    contentBorder.style.width = "0%";
+    contentBorder.style.borderBottomColor = "transparent";
+    titleBorder.style.height = "0px";
+    titleBorder.style.width = "0%";
+    titleBorder.style.borderRightColor = "transparent";
+    titleBorder.style.borderBottomColor = "transparent";
+}
+function onFaq()
+{
+    var articleTitle = document.querySelector("#faq > .title");
+    var articleContent = document.querySelector("#faq > .content");
+    var titleBorder = document.querySelector("#faq > .title > .flexBorder");
+    var contentBorder = document.querySelector("#faq > .content > .flexBorder");
+    articleTitle.style.color = "#5ffce7";
+    // articleTitle[index].style.borderBottom = "2px solid #5ffce7";
+    articleContent.style.backgroundColor = "#e227fb60";
+    articleContent.style.boxShadow = "5px 5px 10px #022546c0";
+    // articleContent[index].style.borderBottom = "2px solid #5ffce7";
+    articleContent.style.borderLeftColor = "#5ffce7";
+    contentBorder.style.width = "100%";
+    contentBorder.style.borderBottomColor = "#5ffce7";
+    titleBorder.style.height = "20px";
+    titleBorder.style.width = "100%";
+    titleBorder.style.borderRightColor = "#5ffce7";
+    titleBorder.style.borderBottomColor = "#5ffce7";
+}
+function offFaq()
+{
+    var articleTitle = document.querySelector("#faq > .title");
+    var articleContent = document.querySelector("#faq > .content");
+    var titleBorder = document.querySelector("#faq > .title > .flexBorder");
+    var contentBorder = document.querySelector("#faq > .content > .flexBorder");
+    articleTitle.style.color = "white";
+    // articleTitle[index].style.borderBottom = "2px solid white";
+    articleContent.style.backgroundColor = "transparent";
+    articleContent.style.boxShadow = "none";
+    // articleContent[index].style.borderBottom = "none";
+    articleContent.style.borderLeftColor = "white";
+    contentBorder.style.width = "0%";
+    contentBorder.style.borderBottomColor = "transparent";
+    titleBorder.style.height = "0px";
+    titleBorder.style.width = "0%";
+    titleBorder.style.borderRightColor = "transparent";
+    titleBorder.style.borderBottomColor = "transparent";
 }
 var count = 0;
 function nextOne()
