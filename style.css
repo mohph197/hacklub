@@ -74,7 +74,7 @@ nav > .links > li > a > .flexBorder{
   left: 50%;
   bottom: 0;
   border-bottom: 2px solid transparent;
-  transition-duration: 0.4s;
+  transition-duration: 0.2s;
 }
 nav > .links > li > a:hover .flexBorder{
   left: 0%;
