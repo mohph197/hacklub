@@ -36,7 +36,9 @@ nav {
   top: 0;
   padding: 0 5%;
   height: 100px;
-  background-color: #277cfb8e;
+  /* background-color: #277cfb8e; */
+  background: linear-gradient(-90deg, #27adfbd3, #ce2cffd3, #ff723ad3);
+  box-shadow: 0px 1px 10px black;
 }
 #logo-image-c {
   display: inline-flex;
